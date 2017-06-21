@@ -1,0 +1,372 @@
+Preventing copy paste for confirm email in form:
+-----------------------------------------------------------
+$('#confirm_email').bind('paste', function (e) {
+            e.preventDefault();
+        });
+
+Passing form filed value to next html page:
+-----------------------------------------------------------
+var stringQueryEmail=$("input[type=email]").serialize(); //email field
+		var data=$("#errormsg a").attr('href'); //get href attribute from a link
+		$("#theMemberMsg a").attr('href',data+stringQueryEmail);// append email field value to href attribute	
+
+
+Html page:var 
+-----------------------------------------------------------
+//jquery code
+    $(document).ready(function () {
+	var parameters = decodeURIComponent(location.search.substring(1));//get current url
+	var parametersarray = parameters.split('=');
+	parametersarray.forEach(function(val,i){
+		if(val=="1st[EMAIL]") 
+			$("#update_email").val(parametersarray[i+1])
+	})	
+})
+
+// for more than one parameter
+ var parameters = decodeURIComponent(location.search.substring(1));//get current url
+	var parametersarray = parameters.split('&'); var session = “”;
+parametersarray.forEach(function(val,i){
+newArray = val.split("=");
+newArray.forEach(function(val,i){
+if(val == "session")
+session=newArray[i+1];
+});
+})
+
+Drop down option seletion:
+-----------------------------------------------------------
+if($(".selectbox-country option:selected").text()=="Australia")
+Input selection name starting with ‘gr’
+input[name^='gr']
+
+//retrun true if any checkbox is checked from a group of checkbox
+		function ischecked(chekcboxgroup){
+			var eventSelected=false;
+			$(chekcboxgroup+" input[type=checkbox]").each(function(){
+				if($(this).is(":checked"))
+				  eventSelected=true;			
+			});
+			return eventSelected;
+		}
+var isChecked = $(".user_input_div_chekcbox .checkbox input[type=checkbox]").is(":checked");
+
+or 
+$('.checkbox1:checked').length;
+Removing last character
+newState.slice(0,-1)
+removing space
+.replace(/ /g,'')
+
+
+Input number only:
+-----------------------------------------------------------
+function isNumberKey(evt){
+		// only allow numerical chars
+		var charCode = (evt.which) ? evt.which : event.keyCode;
+		if (charCode > 31 && (48 > charCode || charCode > 57)) {
+			return false;
+		}
+		return true;
+	}
+<input type="text" class="textbox" onkeypress="return isNumberKey(event);">
+
+//auto fill validation error message solution
+        $("input").on('input',function(){
+            $("#evregform").valid();
+        });
+
+
+Selecting Option from drop down list
+-----------------------------------------------------------
+//auto dropdown menu select
+	var currentClass = “Australia”;
+			$('#class option').filter(function(index) { 			
+				return ($(this).val() == currentClass); //To select class
+			}).prop('selected', true);	
+		// Display other dropdown if Australia selected from above dropdown
+			if( currentClass ){
+					$("#class_detail_div").show();				
+					$("#class_detail").html('<option value="">Please Select</option>');
+					classOption(currentClass);
+					var currentClassDetail = “NSW";
+					$('#class_detail option').filter(function(index) { 			
+						return ($(this).val() == currentClassDetail); //To select class Detail
+					}).prop('selected', true);	
+				}
+				
+//add class detail option
+-----------------------------------------------------------
+	function classOption(class_option){
+		switch(class_option){
+				case "Class 1: Passenger Vessel" : 
+						classType["option1"].forEach(function(arrayValue){
+							console.log("value"+arrayValue);
+							$("#class_detail").append("<option value='"+arrayValue+"'>"+arrayValue+"</option>")						
+						}); 
+						break;
+				case "Class 2: Trading Vessel" :							
+						classType["option2"].forEach(function(arrayValue){
+							$("#class_detail").append("<option value='"+arrayValue+"'>"+arrayValue+"</option>")						
+						}); 	
+						break;	
+				case "Class 3: Fishing Vessel" :							
+				classType["option3"].forEach(function(arrayValue){
+					$("#class_detail").append("<option value='"+arrayValue+"'>"+arrayValue+"</option>")						
+				}); 	
+				break;	
+				case "Class 4: Hire and Drive Vessel" :							
+				classType["option4"].forEach(function(arrayValue){
+					$("#class_detail").append("<option value='"+arrayValue+"'>"+arrayValue+"</option>")						
+				}); 	
+				break;
+			}		
+	}		
+	
+Converting string to array
+-----------------------------------------------------------
+var svc_value=”au,nz,nep”;
+			var svc_array=svc_value.split(",");
+			$(".market input[name^='gr']").each(function(i,v){				
+				var elem=$(this);
+				svc_array.forEach(function(arrayValue){
+					if(elem.val()==arrayValue)
+						elem.attr("checked",true);
+				});
+			})
+
+//clear form code
+-----------------------------------------------------------
+$("#ClearField").click(function(){
+    $(":input:not(:buttton):not(:hidden)").val('').attr("checked",false);
+	//$('form').trigger('reset');
+});
+
+//Diasble  copy paste
+-----------------------------------------------------------
+$('#email').bind("cut copy paste",function(e) {
+          e.preventDefault();
+      });
+
+//Disable Auto Zoom in Input Text”tag - Safari on iPhone
+-----------------------------------------------------------
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+					@media screen and (-webkit-min-device-pixel-ratio:0) { 
+					  select:focus,
+					  textarea:focus,
+					  input:focus {
+						font-size: 16px;
+					  }
+					}
+OR	
+select:focus,
+					  textarea:focus,
+					  input:focus {
+						font-size: 16px;
+					  }
+//disabling tel effect in iphone and android
+-----------------------------------------------------------
+<meta name="format-detection" content="telephone=no" />
+//selecting dropdown menu value
+$('#ID option:selected').val()
+
+
+//ForEach for IE8
+-----------------------------------------------------------
+if (!Array.prototype.forEach) {
+    Array.prototype.forEach = function(fn, scope) {
+        for(var i = 0, len = this.length; i < len; ++i) {
+            fn.call(scope, this[i], i, this);
+        }
+    }
+}
+
+
+//Find and replace
+//replace Registration to Entry		
+-----------------------------------------------------------				
+var text = $("#progressBar").html();
+text = text.replace("Registration", "Entry");
+$("#progressBar").html(text); 
+//find array index that contain word strong
+progressArr = [“a”,”<strong>b</strong>”];
+var search = new RegExp("strong" , "i");
+var arr = jQuery.grep(progressArr, function (value) {							return search.test(value);
+	} );	
+//ignore case in contains
+$.expr[':'].containsIgnoreCase = function (n, i, m) {
+return jQuery(n).text().toUpperCase()
+            .indexOf(m[3].toUpperCase()) >= 0;
+};
+$(".topic:containsIgnoreCase("+seach_string+")")
+//finding object and accessing each object array value
+var clients ={
+        general:["ccv.jpg", "neca.jpg"],
+        government: ["ag-gbr.jpg","destination-nsw.jpg","ipc.jpg","la-nsw.jpg"]
+};
+var img_div =$(".clients .img-container");	
+for (var imgFolder in clients) {                        //imgFolder is Foldername	
+     imgFolderArray =clients[imgFolder];
+	
+    imgFolderArray.forEach(function(image){      //image is name of image in each folder
+                 image = imgFolder+"/"+image;
+                  img_div.append('<div ></div>');	
+            });
+		
+}
+
+//Adding day in Date
+-----------------------------------------------------------						
+Date.prototype.addDays=function (value) {   							  this.setDate(this.getDate() + value);							  return this; };
+var d = new Date();
+var issueDate = d.getDate()+ "/"+(d.getMonth()+1)+ "/"+d.getFullYear();
+d.addDays(14);//add 14 days
+var dueDate = d.getDate()+ "/"+(d.getMonth()+1)+ "/"+d.getFullYear();
+Dropdown for update page:
+$("#title").val(htmldecode("{!FORM_TITLE!}"));// {!FORM_TITLE!}"=select value,#title is id of select
+if (document.getElementById('title').selectedIndex == -1) {//if tile is empty ie(-1)			document.getElementById('title').selectedIndex = 0;//select dropdown option with value=””
+		}
+CSS:
+To apply submit button effect in iPhone:
+-----------------------------------------------------------
+input[type="submit"]{
+-webkit-appearance: none;
+}
+Not CSS2 example:
+-----------------------------------------------------------
+td:not(.selected):hover{background-color: #eee; }
+
+IE compatibility meta tag:
+-----------------------------------------------------------
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+IE mobile meta tag
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+Selecting Unique value in array
+-----------------------------------------------------------
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+// usage example:
+-----------------------------------------------------------
+var a = ['a', 1, 'a', 2, '1'];
+var unique = a.filter( onlyUnique ); // returns ['a', 1, 2, '1']
+
+
+//show all content except first
+-----------------------------------------------------------
+div.section-form:not(:nth-child(1)){
+	display:none;
+}
+
+//$(".section-form").not(":first").hide();
+/**trim() to workd in IE8 */
+-----------------------------------------------------------
+		if(typeof String.prototype.trim !== 'function') {
+		  String.prototype.trim = function() {
+			return this.replace(/^\s+|\s+$/g, ''); 
+		  }
+		}
+
+
+
+Selecting one checkbox with different name
+-----------------------------------------------------------
+$(document).ready(function () {
+    $('input[type=radio]').change(function() {
+        // When any radio button on the page is selected,
+        // then deselect all other radio buttons.
+        $('input[type=radio]:checked').not(this).prop('checked', false);
+    });
+});
+
+
+Detecting IE version:
+-----------------------------------------------------------
+function isIE () {
+var myNav = navigator.userAgent.toLowerCase();
+return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+}
+if (isIE () && isIE () < 9) {				 
+// is IE version less than 9
+alert("you are using ie version less than 9");
+}
+else {
+	 alert("you are using  IE 9 and later or not IE");
+}
+
+/***Location url **/
+-----------------------------------------------------------
+function getUrlParameter(param, dummyPath) {
+				var sPageURL = dummyPath || window.location.search.substring(1),
+					sURLVariables = sPageURL.split(/[&||?]/),
+					res;
+		
+				for (var i = 0; i < sURLVariables.length; i += 1) {
+					var paramName = sURLVariables[i],
+						sParameterName = (paramName || '').split('=');
+		
+					if (sParameterName[0] === param) {
+						res = sParameterName[1];
+					}
+				}
+		
+				return res;
+		}
+
+
+IFrame auto resize:
+JS Pluggin:
+-----------------------------------------------------------
+<script src="http://suite.peoplelogic.com.au/scripts/production/iframe-resizer/js/iframeResizer.min.js"></script>
+iFrame code: (replace src) 
+<iframe id="iframeCalendar" scrolling="no" src="//suitetalking.swiftdigital.com.au/scripts/SuiteTalking/calendar/testCalendar/calendar.html?calendar=Quick%20Test%20Calendar" style="border:0" width="100%"></iframe></p>
+<script>iFrameResize({log:true,autoResize:true})</script>
+
+please make sure 
+-----------------------------------------------------------
+https://suitetalking.swiftdigital.com.au/scripts/SuiteTalking/calendar/testCalendar/js/iframeResizer.contentWindow.min.js
+file is present in iframe source file
+
+
+/****Call to action button auto trigger******/
+ var QueryString = function () {
+    // This function is anonymous, is executed immediately and
+    // the return value is assigned to QueryString!
+    var query_string = {};
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        // If first entry with this name
+        if (typeof query_string[pair[0]] === "undefined") {
+            query_string[pair[0]] = decodeURIComponent(pair[1]);
+            // If second entry with this name
+        } else if (typeof query_string[pair[0]] === "string") {
+            var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+            query_string[pair[0]] = arr;
+            // If third or later entry with this name
+        } else {
+            query_string[pair[0]].push(decodeURIComponent(pair[1]));
+        }
+    }
+    return query_string;
+}();
+
+switch(QueryString.form){
+    case "demo":
+        $("#demomodal").modal();
+        break;
+    case "trial":
+        $("#trialmodal").modal();
+        break;
+    case "price":
+        $("#pricemodal").modal();
+        break;
+}     
+
+Fg: https://www.swiftdigital.com.au/?form=demo
