@@ -1,0 +1,58 @@
+QBE Event with background Image:
+http://comms.qbe.com.au/pub/pubType/EV/pubID/zzzz55651ed790aa2749/nc/zzzz556687a9a700c325/interface.html
+
+Westpac update Details form:
+http://events.westpac.com.au/link/id/zzzz55499c0e2df6a927Pzzzz55499c923c243024/page.html
+http://events.westpac.com.au/link/id/zzzz557001ac27ef1631Pzzzz556bc7c90fd89955/page.html
+
+Service NSW Office:
+http://servicensw.e-newsletter.com.au/pub/pubType/EL/pubID/zzzz5563d1a17c46d343/nc/zzzz5566be9017569922/interface.html
+
+Calibre subscribe (Customized):
+http://calibreconsulting.e-newsletter.com.au/link/id/zzzz553d8487dc878773Pzzzz55273c463f5a8092/page.html?prompt=1&parent_id=zzzz5524d814cd2d4289
+Australian Maritime safety: (subscribe)
+http://domestic-vessel-enews.amsa.gov.au/link/id/zzzz55b189f06ea19319Pzzzz55b0559508abf085/page.html?prompt=1&parent_id=zzzz55876fe56369d960
+Australina Rural Fire
+http://suite.swiftdigital.com.au/scripts/ruralfireservice/index.html
+http://www.rfs.nsw.gov.au/news-and-media/information-for-the-media/media-distribution-sign-up
+AMP Advice:
+http://ampadvice.i-events.info/link/id/zzzz55b96c4d7a97b317/regform?evuid=zzzz55b195fda5889092&fromT3=1
+cBus:
+https://comms.cbussuper.com.au/link/id/zzzz55dd37dbd6662002/regform?evuid=zzzz54f93714b7cc2735
+Mine:
+http://employersenews.mine.com.au/link/id/zzzz55ac89e6a3eba593Pzzzz55ac8986484f1029/page.html?prompt=1&parent_id=zzzz55920368184cb075
+
+Westpac survey
+http://events.westpac.com.au/link/id/zzzz5608800900120378Pzzzz556bc7c90fd89955/page.html
+QBE Add guest
+http://comms.qbe.com.au/link/id/zzzz5617337bd4a7f467/regform?evuid=zzzz561733b81d767008
+
+Cbus Calendar:
+https://comms.cbussuper.com.au/scripts/cbus/cbusretirement/calendar.html?calendar=calendartest
+Cbus quiz:
+https://comms.cbussuper.com.au/link/id/zzzz56e89d57e58dc467Pzzzz56e20a49572c8864/page.html?prompt=1&parent_id=zzzz56e89223d7302858
+https://comms.cbussuper.com.au/link/id/zzzz56f9cad03ffb4660Pzzzz56e20a49572c8864/page.html?prompt=1
+UVEX:
+http://uvex.e-newsletter.com.au/link/id/zzzz56d4e4dea5dec746Pzzzz56cfbe64488f7141/page.html?prompt=1&parent_id=zzzz56ce71b0c6fe1228
+
+QBE event Calendar:
+https://www.qbe.com.au/business/insurance-for-businesses/people/workers-compensation/training/training-calendar
+https://comms.qbe.com.au/scripts/qbeCalendar/qbeWorkersComp/calendar.html?calendar=WC%20National%20Training%20Calendar
+DNSW:
+http://comms.dnsw.com.au/scripts/destnsw/events.html?calendar=2016%20NSW%20First%20Program
+Fair Trading NSW (AngularJS)
+https://events.fairtrading.nsw.gov.au/scripts/NSWFairTradingCalendar/calendar/calendar.html?calendar=General
+CGU calendar:
+https://events.cgu.com.au/scripts/cguinsurance/calendar/calendar.html?calendar=2016Calendar
+Micro Site:
+http://nobelbiocare.e-newsletter.com.au/scripts/nobelbiocare
+
+silverhall:
+http://silverhall.e-newsletter.com.au/link/id/zzzz57bfb5a5d166e747/regform?evuid=zzzz5768d88b3bbd8811
+
+Belle Head Office
+http://mailer.bllphq.com.au/alert_gen_test.php?tpl=property_alert
+http://mailer.bllphq.com.au/alert_gen_test.php?tpl=insp_alert
+http://mailer.bllphq.com.au/alert_gen_test.php?tpl=auction_alert
+http://mailer.bllphq.com.au/alert_gen_test.php?tpl=sold_alert
+
